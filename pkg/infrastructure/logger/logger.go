@@ -1,3 +1,4 @@
+// implements a logging service using zerolog.
 package logger
 
 import (
