@@ -25,6 +25,5 @@ func main() {
 
 	logsrv.Info().Msg("Hello from zeroLog")
 
-	fmt.Printf("%q %q %q %q %q %q %q\n", cfg.Rpc.Host, cfg.Rpc.Port, cfg.Environment, cfg.PG.Conn,
-		cfg.Web.Port, cfg.Web.Host, cfg.MYSQL.Conn)
+	fmt.Printf("%q %q %q\n", cfg.PG.Conn, cfg.Server.Conn, cfg.MYSQL.Conn)
 }
