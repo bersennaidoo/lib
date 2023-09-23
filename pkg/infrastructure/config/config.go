@@ -17,10 +17,15 @@ type (
 		Conn string `required:"true"`
 	}
 
+	MYSQLConfig struct {
+		Conn string `required:"true"`
+	}
+
 	AppConfig struct {
 		Environment     string
 		LogLevel        string `envconfig:"LOG_LEVEL" default:"DEBUG"`
 		PG              PGConfig
+		MYSQL           MYSQLConfig
 		Rpc             rpc.RpcConfig
 		Web             swaggerweb.WebConfig
 		ShutdownTimeout time.Duration `envconfig:"SHUTDOWN_TIMEOUT" default:"30s"`
