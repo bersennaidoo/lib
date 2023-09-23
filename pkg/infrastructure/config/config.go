@@ -22,8 +22,8 @@ type (
 	}
 
 	HTTPServer struct {
-		Host string
-		Port string
+		Host string `required:"true"`
+		Port string `required:"true"`
 	}
 
 	AppConfig struct {
