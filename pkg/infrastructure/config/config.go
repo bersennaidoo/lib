@@ -9,7 +9,7 @@ import (
 	"github.com/stackus/dotenv"
 
 	"github.com/bersennaidoo/lib/pkg/infrastructure/rpc"
-	"github.com/bersennaidoo/lib/pkg/infrastructure/web"
+	"github.com/bersennaidoo/lib/pkg/infrastructure/swaggerweb"
 )
 
 type (
@@ -22,7 +22,7 @@ type (
 		LogLevel        string `envconfig:"LOG_LEVEL" default:"DEBUG"`
 		PG              PGConfig
 		Rpc             rpc.RpcConfig
-		Web             web.WebConfig
+		Web             swaggerweb.WebConfig
 		ShutdownTimeout time.Duration `envconfig:"SHUTDOWN_TIMEOUT" default:"30s"`
 	}
 )
