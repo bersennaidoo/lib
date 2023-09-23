@@ -21,9 +21,15 @@ type (
 		Conn string `required:"true"`
 	}
 
+	HTTPServer struct {
+		Host string
+		Port string
+	}
+
 	AppConfig struct {
 		Environment     string
 		LogLevel        string `envconfig:"LOG_LEVEL" default:"DEBUG"`
+		Server          HTTPServer
 		PG              PGConfig
 		MYSQL           MYSQLConfig
 		Rpc             rpc.RpcConfig
