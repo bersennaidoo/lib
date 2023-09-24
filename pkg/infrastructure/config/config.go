@@ -23,7 +23,6 @@ type (
 
 	HTTPServer struct {
 		Conn string `required:"true"`
-		Port string `required:"true"`
 	}
 
 	AppConfig struct {
