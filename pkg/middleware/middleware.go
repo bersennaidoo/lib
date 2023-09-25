@@ -5,7 +5,5 @@ type MiddleWare struct {
 }
 
 func New() *MiddleWare {
-	return &MiddleWare{
-		Runtime: Runtime,
-	}
+	return &MiddleWare{}
 }
