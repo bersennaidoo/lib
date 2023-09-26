@@ -1,9 +1,12 @@
 package middleware
 
 type MiddleWare struct {
-	Runtime Runtime
+	Runtime   Runtime
+	Validator *Validator
 }
 
-func New() *MiddleWare {
-	return &MiddleWare{}
+func New(valid *Validator) *MiddleWare {
+	return &MiddleWare{
+		Validator: valid,
+	}
 }
