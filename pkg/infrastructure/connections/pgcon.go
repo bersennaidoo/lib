@@ -5,10 +5,11 @@ import (
 	"database/sql"
 	"time"
 
+	"github.com/bersennaidoo/lib/pkg/infrastructure/config"
 	_ "github.com/lib/pq"
 )
 
-func OpenPGDB(cfg AppConfig) (*sql.DB, error) {
+func OpenPGDB(cfg config.AppConfig) (*sql.DB, error) {
 
 	db, err := sql.Open("postgres", cfg.PG.Conn)
 	if err != nil {
