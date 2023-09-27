@@ -34,6 +34,9 @@ type (
 		Rpc             rpc.RpcConfig
 		Web             swaggerweb.WebConfig
 		ShutdownTimeout time.Duration `envconfig:"SHUTDOWN_TIMEOUT" default:"30s"`
+		MaxOpenConns    int
+		MaxIdleConns    int
+		MaxIdleTime     string
 	}
 )
 

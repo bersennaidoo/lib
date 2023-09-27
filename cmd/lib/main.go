@@ -25,6 +25,7 @@ func main() {
 
 	logsrv.Info().Msg("Hello from zeroLog")
 
-	fmt.Printf("%q %q %q\n", cfg.PG.Conn, cfg.Server.Conn, cfg.MYSQL.Conn)
-	fmt.Println("v0.0.1")
+	fmt.Printf("%q %q %q %q\n", cfg.PG.Conn, cfg.Server.Conn, cfg.MYSQL.Conn, cfg.Environment)
+
+	fmt.Printf("%v %v %q\n", cfg.MaxOpenConns, cfg.MaxIdleConns, cfg.MaxIdleTime)
 }
